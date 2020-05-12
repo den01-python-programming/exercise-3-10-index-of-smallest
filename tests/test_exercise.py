@@ -2,7 +2,7 @@ import pytest
 import src.exercise
 
 def test_exercise():
-    input_values = ["11","4","5","64","9999","4","11","5","5","64","9999","5"]
+    input_values = ["11","4","5","64","9999","4","11","5","5","64","9999"]
     output = []
 
     def mock_input(s=None):
@@ -23,5 +23,5 @@ def test_exercise():
 
     src.exercise.main()
 
-    assert output[0:5] == ["","","","","Smallest number: 4","Found at index: 1"]
-    assert output[6:12] == ["","","","","Smallest number: 5","Found at index: 1","Found at index: 2"]
+    assert output == ["","","","","","Smallest number: 4","Found at index: 1",\
+                        "","","","","","","Smallest number: 4","Found at index: 0"]
